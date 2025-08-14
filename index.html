@@ -54,12 +54,7 @@
       height: 32px;
       filter: drop-shadow(0 1px 3px #60a5fa55);
     }
-    .header-name {
-      font-family: 'Montserrat', Arial, sans-serif;
-      font-size: 1.45rem;
-      font-weight: 700;
-      background: linear-gradient(90deg, #60a5fa 0%, #232526 100%);
-      -webkit-background-clip: text;
+   -clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       color: #e0e6ed;
@@ -100,19 +95,7 @@
       width: 40px;
     }
     .hamburger span::after {
-      content: '';
-      top: 14px;
-      position: absolute;
-      left: 0;
-      width: 40px;
-    }
-    .side-menu {
-      position: fixed;
-      top: 0;
-      left: -220px;
-      width: 200px;
-      height: 100%;
-      background: rgba(34,37,38,0.96);
+     : rgba(34,37,38,0.96);
       box-shadow: 2px 0 16px #23252666;
       padding: 90px 0 0 0;
       transition: left 0.3s;
@@ -161,9 +144,7 @@
     }
     .container.active {
       display: block;
-      animation: fadeIn 0.7s;
-    }
-    @keyframes fadeIn {
+      animation: fadeIn 0.7frames fadeIn {
       from { opacity: 0; transform: translateY(18px);}
       to { opacity: 1; transform: translateY(0);}
     }
@@ -264,10 +245,7 @@
       height: 26px;
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-    }
-    .footer {
-      margin-top: 24px;
+      justify-content;
       font-size: 0.97rem;
       color: #60a5fa;
       text-align: center;
@@ -292,21 +270,20 @@
       .hamburger span::before { top: -11px; width: 32px;}
       .hamburger span::after { top: 11px; width: 32px;}
       .side-menu { padding-top: 68px; }
-      .container { margin-top: 82px; max-width: 98vw; padding: 16px-circle { width: 38px; height: 38px;}
+      .container { margin-top: 82px; max-width: 98vw; padding: 16px 2vw;}
+      .logo-circle { width: 38px; height: 38px;}
       .logo-circle svg { width: 19px; height: 19px;}
       h1 { font-size: 1.05rem; }
       .profile-pic { width: 38px; height: 38px; margin-bottom: 7px;}
-      .discord-invite { font-size: 0.92rem; padding: 5px 12px; margin-top: 8px;}
-      .tag { font-size: 0.85rem; padding: 4px 8px; margin: 5px 0 3px 0;}
-      p { font-size: 0.91rem; }
-      body { background-size: 150px, auto, cover; }
-    }
+      .discord-in    }
     @media (max-width: 500px) {
       .header-bar { height: 56px; }
       .header-content { gap: 6px; }
       .header-logo { width: 28px; height: 28px;}
       .header-logo svg { width: 15px; height: 15px;}
-      .header-name { font-size: 0px; left: 2px;: 22px;}
+      .header-name { font-size: 0.95rem;}
+      .hamburger { top: 8px; left: 2px; width: 32px; height: 32px; }
+      .hamburger span, .hamburger span::before, .hamburger span::after { height: 4px; width: 22px;}
       .hamburger span::before { top: -7px; width: 22px;}
       .hamburger span::after { top: 7px; width: 22px;}
       .side-menu { padding-top: 56px; }
@@ -328,8 +305,7 @@
     <div class="header-content">
       <div class="header-logo">
         <!-- SVG LOGO -->
-        <svg viewBox="0 0 48 48" fill="none">
-          <circle cx="24" cy="24" r="22" fill="#232526" opacity="0.7"/>
+        <.7"/>
           <path d="M16 30c5-5 11-2 16-8" stroke="#60a5fa" stroke-width="3" stroke-linecap="round"/>
           <circle cx="18" cy="18" r="3" fill="#2563eb"/>
           <circle cx="32" cy="16" r="3.5" fill="#60a5fa"/>
@@ -350,24 +326,19 @@
   </nav>
   <div class="overlay" id="overlay" onclick="closeMenu()"></div>
   <!-- Halaman Home -->
-  <div class="container active" id="page-home">
-    <div class="logo-circle">
+  <div class="container active" id="pagelogo-circle">
       <!-- SVG Logo -->
       <svg viewBox="0 0 48 48" fill="none">
         <circle cx="24" cy="24" r="22" fill="#232526" opacity="0.7"/>
         <path d="M16 30c5-5 11-2 16-8" stroke="#60a5fa" stroke-width="3" stroke-linecap="round"/>
-        <circle cx="18" cy="18" r="3" fill="#2563eb"/>
-        <circle cx="32" cy="16" r="3.5" fill="#60a5fa"/>
-      </svg>
-    </div>
-    <h1>Selamat datang di <span>IrpaSoftSpoken.github.io!</span></h1>
-    <span class="tag">Situs Keren & Modern 🚀</span>
-    <p>
+        <circle cxp>
       Ini adalah situs web <b>GitHub Pages</b>.<br>
       <em>Masih dalam tahap pembangunan! Stay tuned untuk update terbaru.</em>
     </p>
   </div>
-  <!-- HalamanD4096%26ignore%3Dtrue%29./https/cdn.discordapp.com/avatars/1028984151552041000/a_d364c6647e91380f3ff4b3c47089461c.gif?width=225&height=225" alt="Foto Profil" class="profile-pic" />
+  <!-- Halaman MyServer -->
+  <div class="container" id="page-server">
+    <img src="https://images-ext-1.discordapp.net/external/lqpbqiUcODZir1MnyWirGP_1ChcgBI6yBeJDwbgmK24/%3Fsize%3D4096%26ignore%3Dtrue%29./https/cdn.discordapp.com/avatars/1028984151552041000/a_d364c6647e91380f3ff4b3c47089461c.gif?width=225&height=225" alt="Foto Profil" class="profile-pic" />
     <h1>Join INA GANG Server!</h1>
     <p>
       Ayo gabung ke server Discord komunitas kami untuk ngobrol, sharing, dan seru-seruan bareng.<br>
@@ -448,9 +419,7 @@
       if(page === 'home') {
         document.getElementById('menu-home').classList.add('active');
         document.getElementById('page-home').classList.add('active');
-      } else if(page === 'server') {
-        document.getElementById('menu-server').classList.add('active');
-        document.getElementById('page-server').classList.add('active');
+      } else.add('active');
       } else if(page === 'tentang') {
         document.getElementById('menu-tentang').classList.add('active');
         document.getElementById('page-tentang').classList.add('active');
