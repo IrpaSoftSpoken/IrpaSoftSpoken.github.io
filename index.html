@@ -8,19 +8,15 @@
   <style>
     body {
       background:
-        linear-gradient(120deg, #77e2d7 0%, #f9ffcf 100%),
-        url('https://www.transparenttextures.com/patterns/geometry2.png'),
-        url('https://cdn.pixabay.com/photo/2014/04/03/10/32/laptop-312769_1280.png');
-      background-repeat: repeat, repeat, no-repeat;
-      background-position: left top, left top, right bottom;
-      background-size: auto, auto, 350px;
-      background-attachment: fixed, fixed, fixed;
+        url('https://cdn.pixabay.com/photo/2014/04/03/10/32/laptop-312769_1280.png') no-repeat right bottom fixed,
+        url('https://www.transparenttextures.com/patterns/geometry2.png') repeat,
+        linear-gradient(120deg, #77e2d7 0%, #fff 100%);
+      background-size: 350px, auto, cover;
       font-family: 'Quicksand', Arial, sans-serif;
       margin: 0;
       padding: 0;
       min-height: 100vh;
     }
-    /* Header bar */
     .header-bar {
       position: fixed;
       top: 0;
@@ -63,7 +59,7 @@
       font-weight: 700;
       color: #1a6a87;
       letter-spacing: 1px;
-      background: linear-gradient(90deg, #28c7fa 60%, #ffe466 100%);
+      background: linear-gradient(90deg, #28c7fa 60%, #fff 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -138,8 +134,8 @@
     }
     .side-menu a.active,
     .side-menu a:hover {
-      background: linear-gradient(90deg, #77e2d7 30%, #f9ffcf 100%);
-      color: #ffae42;
+      background: linear-gradient(90deg, #77e2d7 30%, #fff 100%);
+      color: #28c7fa;
     }
     .overlay {
       display: none;
@@ -197,7 +193,7 @@
     }
     h1 span {
       color: #28c7fa;
-      background: linear-gradient(90deg, #28c7fa 60%, #ffe466 100%);
+      background: linear-gradient(90deg, #28c7fa 60%, #fff 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -206,7 +202,7 @@
       display: inline-block;
       margin: 8px 0 5px 0;
       font-size: 0.9rem;
-      background: linear-gradient(90deg, #ffe466 60%, #ffd280 100%);
+      background: linear-gradient(90deg, #fff 60%, #f4f7fa 100%);
       color: #1a6a87;
       border-radius: 8px;
       padding: 5px 12px;
@@ -232,8 +228,8 @@
     }
     .discord-invite {
       display: inline-block;
-      background: linear-gradient(90deg, #28c7fa 60%, #ffe466 100%);
-      color: #fff;
+      background: linear-gradient(90deg, #28c7fa 60%, #fff 100%);
+      color: #1a6a87;
       font-weight: 600;
       border-radius: 8px;
       padding: 6px 16px;
@@ -245,7 +241,30 @@
     }
     .discord-invite:hover {
       background: linear-gradient(90deg, #1a6a87 60%, #28c7fa 100%);
+      color: #fff;
       box-shadow: 0 4px 18px #28c7fa55;
+    }
+    .social-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: flex-start;
+      margin: 18px 0 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .social-list li {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 1.05rem;
+    }
+    .social-icon {
+      width: 26px;
+      height: 26px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
     .footer {
       margin-top: 24px;
@@ -263,7 +282,6 @@
       color: #1a6a87;
       text-decoration: underline;
     }
-    /* Responsive */
     @media (max-width: 700px) {
       .header-bar { height: 68px; }
       .header-logo { width: 36px; height: 36px; }
@@ -283,7 +301,7 @@
       .tag { font-size: 0.85rem; padding: 4px 8px; margin: 5px 0 3px 0;}
       p { font-size: 0.91rem; }
       body {
-        background-size: auto, auto, 180px;
+        background-size: 150px, auto, cover;
       }
     }
     @media (max-width: 500px) {
@@ -306,7 +324,7 @@
       .tag { font-size: 0.78rem; padding: 3px 7px; margin: 3px 0 2px 0;}
       p { font-size: 0.86rem; }
       body {
-        background-size: auto, auto, 100px;
+        background-size: 85px, auto, cover;
       }
     }
   </style>
@@ -335,7 +353,7 @@
   <nav class="side-menu" id="sideMenu">
     <a href="#" id="menu-home" onclick="showPage('home');return false;" class="active">Home</a>
     <a href="#" id="menu-server" onclick="showPage('server');return false;">MyServer</a>
-    <!-- Tambah menu lagi di sini kalau mau -->
+    <a href="#" id="menu-tentang" onclick="showPage('tentang');return false;">Tentang</a>
   </nav>
   <div class="overlay" id="overlay" onclick="closeMenu()"></div>
   <!-- Halaman Home -->
@@ -366,6 +384,55 @@
     </p>
     <a class="discord-invite" href="https://discord.gg/frJWeSwJet" target="_blank">Masuk ke Discord 🚀</a>
   </div>
+  <!-- Halaman Tentang -->
+  <div class="container" id="page-tentang">
+    <div class="logo-circle">
+      <!-- SVG Logo, bisa diganti -->
+      <svg viewBox="0 0 48 48" fill="none">
+        <circle cx="24" cy="24" r="22" fill="#fff" opacity="0.7"/>
+        <path d="M16 30c5-5 11-2 16-8" stroke="#28c7fa" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="18" cy="18" r="3" fill="#1a6a87"/>
+        <circle cx="32" cy="16" r="3.5" fill="#7cf7cb"/>
+      </svg>
+    </div>
+    <h1><span>Tentang</span> Website Ini</h1>
+    <ul class="social-list">
+      <li>
+        <b>Developed by:</b> <span>IrpaSoftSpoken</span>
+      </li>
+      <li>
+        <b>Made on:</b> <span>2024</span>
+      </li>
+      <li>
+        <span class="social-icon">
+          <!-- Discord SVG Icon -->
+          <svg fill="#5865F2" viewBox="0 0 40 32" width="24" height="24">
+            <path d="M36.2 2H3.8C2 2 .5 3.5.5 5.3v21.5c0 1.8 1.5 3.3 3.3 3.3h27.1l-1.3-4.5 3.1 2.9 2.9-2.9-1.3 4.5h2.8c1.8 0 3.3-1.5 3.3-3.3V5.3C39.5 3.5 38 2 36.2 2zM13.6 20.8c-2 0-3.6-1.8-3.6-4s1.6-4 3.6-4 3.7 1.8 3.7 4-1.7 4-3.7 4zm12.7 0c-2 0-3.7-1.8-3.7-4s1.7-4 3.7-4 3.6 1.8 3.6 4-1.6 4-3.6 4z"/>
+          </svg>
+        </span>
+        <a href="https://discord.gg/frJWeSwJet" target="_blank">Discord Kami</a>
+      </li>
+      <li>
+        <span class="social-icon">
+          <!-- YouTube SVG Icon -->
+          <svg fill="#FF0000" viewBox="0 0 32 32" width="24" height="24">
+            <path d="M31.4 8.2c-.4-1.7-1.7-2.9-3.4-3.2C25.3 4.5 16 4.5 16 4.5s-9.3 0-12 0.5c-1.7.3-3 1.5-3.4 3.2C0 10.7 0 16 0 16s0 5.3.6 7.8c.4 1.7 1.7 2.9 3.4 3.2C6.7 27.5 16 27.5 16 27.5s9.3 0 12-.5c1.7-.3 3-1.5 3.4-3.2.6-2.5.6-7.8.6-7.8s0-5.3-.6-7.8zM12.7 21V11l9.3 5-9.3 5z"/>
+          </svg>
+        </span>
+        <a href="https://youtube.com/@irfastore969?si=RPwP3lZymWLqAbwL/" target="_blank">YouTube</a>
+      </li>
+      <li>
+        <span class="social-icon">
+          <!-- GitHub SVG Icon -->
+          <svg fill="#181717" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.757-1.333-1.757-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.107-.775.418-1.305.76-1.605-2.665-.305-5.466-1.334-5.466-5.931 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23A11.52 11.52 0 0 1 12 6.844c1.02.005 2.045.138 3.004.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.804 5.624-5.475 5.921.43.37.814 1.096.814 2.211 0 1.595-.014 2.883-.014 3.274 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+          </svg>
+        </span>
+        <a href="https://github.com/IrpaSoftSpoken" target="_blank">GitHub</a>
+      </li>
+      <!-- Tambahkan sosial media lain di bawah sini -->
+    </ul>
+  </div>
   <div class="footer">
     &copy; 2025 <a href="https://github.com/IrpaSoftSpoken" target="_blank">IrpaSoftSpoken</a>
   </div>
@@ -382,15 +449,20 @@
       // Tab nav active
       document.getElementById('menu-home').classList.remove('active');
       document.getElementById('menu-server').classList.remove('active');
+      document.getElementById('menu-tentang').classList.remove('active');
       // Show/hide content
       document.getElementById('page-home').classList.remove('active');
       document.getElementById('page-server').classList.remove('active');
+      document.getElementById('page-tentang').classList.remove('active');
       if(page === 'home') {
         document.getElementById('menu-home').classList.add('active');
         document.getElementById('page-home').classList.add('active');
       } else if(page === 'server') {
         document.getElementById('menu-server').classList.add('active');
         document.getElementById('page-server').classList.add('active');
+      } else if(page === 'tentang') {
+        document.getElementById('menu-tentang').classList.add('active');
+        document.getElementById('page-tentang').classList.add('active');
       }
       closeMenu();
     }
