@@ -382,7 +382,7 @@ body.dark-mode .overlay{background:rgba(20,140,120,.12)}
         </svg>
       </div>
       <span class="header-name">Irfa Store</span>
-<button id="darkModeBtn" aria-label="Toggle dark mode" aria-pressed="false">🌙 Dark</button>
+<button id="darkModeBtn" aria-label="Toggle dark mode" aria-pressed="false">🌙</button>
     </div>
   </div>
   <!-- Hamburger -->
@@ -527,7 +527,7 @@ body.dark-mode .overlay{background:rgba(20,140,120,.12)}
 
     function updateBtn(){
       const isDark=document.body.classList.contains('dark-mode');
-      btn.textContent=isDark?'☀ Light':'🌙 Dark';
+      btn.textContent=isDark?'☀':'🌙';
       btn.setAttribute('aria-pressed', isDark?'true':'false');
     }
   })();
