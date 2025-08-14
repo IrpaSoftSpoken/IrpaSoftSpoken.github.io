@@ -27,7 +27,6 @@
       align-items: center;
       justify-content: center;
     }
-    /* Centering header content absolutely in the bar */
     .header-content {
       display: flex;
       align-items: center;
@@ -154,7 +153,7 @@
       background: rgba(255,255,255,0.7);
       border-radius: 18px;
       box-shadow: 0 4px 18px rgba(149,87,230,0.13);
-      padding: 32px 22px;
+      padding: 24px 7vw; /* lebih ramping */
       text-align: center;
       display: none;
     }
@@ -167,27 +166,27 @@
       to { opacity: 1; transform: translateY(0);}
     }
     .logo-circle {
-      width: 78px;
-      height: 78px;
+      width: 54px;
+      height: 54px;
       background: linear-gradient(135deg, #9557e6 60%, #a7c7e7 100%);
       border-radius: 50%;
       box-shadow: 0 4px 18px rgba(149,87,230,0.23);
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 24px auto;
+      margin: 0 auto 14px auto;
       position: relative;
     }
     .logo-circle svg {
-      width: 42px;
-      height: 42px;
+      width: 32px;
+      height: 32px;
       filter: drop-shadow(0 2px 4px #6a42d6aa);
     }
     h1 {
       font-family: 'Montserrat', Arial, sans-serif;
       color: #6a42d6;
-      font-size: 2.0rem;
-      margin-bottom: 12px;
+      font-size: 1.3rem;
+      margin-bottom: 8px;
       margin-top: 0;
       letter-spacing: 1px;
       text-shadow: 0 1px 10px #d1c4e9;
@@ -201,28 +200,28 @@
     }
     .tag {
       display: inline-block;
-      margin: 12px 0 8px 0;
-      font-size: 0.98rem;
+      margin: 8px 0 5px 0;
+      font-size: 0.9rem;
       background: linear-gradient(90deg, #f5e1fd 60%, #d1c4e9 100%);
       color: #6a42d6;
       border-radius: 8px;
-      padding: 5px 16px;
+      padding: 5px 12px;
       font-weight: 600;
       letter-spacing: 0.5px;
       box-shadow: 0 1px 6px #a7c7e7aa;
     }
     p {
       color: #444;
-      font-size: 1.1rem;
+      font-size: 0.98rem;
       margin-bottom: 0;
-      line-height: 1.6;
+      line-height: 1.5;
     }
     .profile-pic {
-      width: 82px;
-      height: 82px;
+      width: 54px;
+      height: 54px;
       border-radius: 50%;
       object-fit: cover;
-      margin-bottom: 18px;
+      margin-bottom: 12px;
       border: 3px solid #a7c7e7;
       background: #eee;
       display: inline-block;
@@ -233,10 +232,10 @@
       color: #fff;
       font-weight: 600;
       border-radius: 8px;
-      padding: 8px 22px;
-      margin-top: 18px;
+      padding: 6px 16px;
+      margin-top: 12px;
       text-decoration: none;
-      font-size: 1.07rem;
+      font-size: 0.98rem;
       box-shadow: 0 2px 9px #a7c7e7aa;
       transition: background 0.2s, box-shadow 0.2s;
     }
@@ -245,7 +244,7 @@
       box-shadow: 0 4px 18px #9557e655;
     }
     .footer {
-      margin-top: 32px;
+      margin-top: 24px;
       font-size: 0.97rem;
       color: #888;
       text-align: center;
@@ -260,9 +259,9 @@
       color: #6a42d6;
       text-decoration: underline;
     }
+    /* Responsive */
     @media (max-width: 700px) {
       .header-bar { height: 68px; }
-      .header-content { gap: 10px; }
       .header-logo { width: 36px; height: 36px; }
       .header-logo svg { width: 20px; height: 20px; }
       .header-name { font-size: 1.1rem; }
@@ -271,7 +270,14 @@
       .hamburger span::before { top: -11px; width: 32px;}
       .hamburger span::after { top: 11px; width: 32px;}
       .side-menu { padding-top: 68px; }
-      .container { margin-top: 90px; }
+      .container { margin-top: 82px; max-width: 98vw; padding: 16px 2vw;}
+      .logo-circle { width: 38px; height: 38px;}
+      .logo-circle svg { width: 19px; height: 19px;}
+      h1 { font-size: 1.05rem; }
+      .profile-pic { width: 38px; height: 38px; margin-bottom: 7px;}
+      .discord-invite { font-size: 0.92rem; padding: 5px 12px; margin-top: 8px;}
+      .tag { font-size: 0.85rem; padding: 4px 8px; margin: 5px 0 3px 0;}
+      p { font-size: 0.91rem; }
     }
     @media (max-width: 500px) {
       .header-bar { height: 56px; }
@@ -284,7 +290,14 @@
       .hamburger span::before { top: -7px; width: 22px;}
       .hamburger span::after { top: 7px; width: 22px;}
       .side-menu { padding-top: 56px; }
-      .container { margin-top: 70px;}
+      .container { margin-top: 60px; max-width: 99vw; padding: 10px 2vw;}
+      .logo-circle { width: 32px; height: 32px;}
+      .logo-circle svg { width: 15px; height: 15px;}
+      h1 { font-size: 0.98rem; }
+      .profile-pic { width: 28px; height: 28px; margin-bottom: 5px;}
+      .discord-invite { font-size: 0.85rem; padding: 4px 8px; margin-top: 6px;}
+      .tag { font-size: 0.78rem; padding: 3px 7px; margin: 3px 0 2px 0;}
+      p { font-size: 0.86rem; }
     }
   </style>
 </head>
