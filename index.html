@@ -12,11 +12,6 @@
         url('https://www.transparenttextures.com/patterns/geometry2.png') repeat,
         linear-gradient(120deg, #232526 0%, #414345 100%);
       background-size: 350px, auto, cover;
-      font-family: 'Quicksand', Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      color: #e0e6ed;
     }
     .header-bar {
       position: fixed;
@@ -25,7 +20,7 @@
       right: 0;
       height: 90px;
       background: rgba(34, 37, 38, 0.96);
-      box-shadow: 0 1px 16px #23252666;
+      box-shadow: 0 1px16 #23252666;
       z-index: 101;
       display: flex;
       align-items: center;
@@ -36,17 +31,7 @@
       align-items: center;
       gap: 22px;
       margin: 0 auto;
-      width: fit-content;
-      z-index: 102;
-    }
-    .header-logo {
-      width: 54px;
-      height: 54px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #232526 60%, #414345 100%);
-      box-shadow: 0 2px 10px #23252633;
-      display: flex;
-      align-items: center;
+      width:      align-items: center;
       justify-content: center;
     }
     .header-logo svg {
@@ -54,21 +39,13 @@
       height: 32px;
       filter: drop-shadow(0 1px 3px #60a5fa55);
     }
-   -clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      color: #e0e6ed;
-      letter-spacing: 1px;
-      user-select: none;
-    }
-    .hamburger {
-      position: fixed;
-      top: 26px;
-      left: 28px;
-      width: 52px;
-      height: 52px;
-      background: none;
-      border: none;
+    .header-name {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #60a5fa 0%, #232526 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent none;
       z-index: 200;
       cursor: pointer;
       display: flex;
@@ -95,7 +72,19 @@
       width: 40px;
     }
     .hamburger span::after {
-     : rgba(34,37,38,0.96);
+      content: '';
+      top: 14px;
+      position: absolute;
+      left: 0;
+      width: 40px;
+    }
+    .side-menu {
+      position: fixed;
+      top: 0;
+      left: -220px;
+      width: 200px;
+      height: 100%;
+      background: rgba(34,37,38,0.96);
       box-shadow: 2px 0 16px #23252666;
       padding: 90px 0 0 0;
       transition: left 0.3s;
@@ -125,26 +114,15 @@
       display: none;
       position: fixed;
       top: 0; left: 0; width: 100vw; height: 100vh;
-      background: rgba(34,37,38,0.10);
-      z-index: 90;
-    }
-    .overlay.open {
-      display: block;
-    }
-    .container {
-      margin: 110px auto 0 auto;
-      max-width: 500px;
-      background: rgba(34,37,38,0.92);
-      border-radius: 18px;
-      box-shadow: 0 4px 18px #23252644;
-      padding: 24px 7vw;
-      text-align: center;
+      background: rgba(34,37,38,0. center;
       display: none;
       color: #e0e6ed;
     }
     .container.active {
       display: block;
-      animation: fadeIn 0.7frames fadeIn {
+      animation: fadeIn 0.7s;
+    }
+    @keyframes fadeIn {
       from { opacity: 0; transform: translateY(18px);}
       to { opacity: 1; transform: translateY(0);}
     }
@@ -187,22 +165,12 @@
       background: linear-gradient(90deg, #232526 60%, #60a5fa22 100%);
       color: #e0e6ed;
       border-radius: 8px;
-      padding: 5px 12px;
-      font-weight: 600;
+      padding: 5600;
       letter-spacing: 0.5px;
       box-shadow: 0 1px 6px #60a5fa44;
     }
     p {
-      color: #e0e6ed;
-      font-size: 0.98rem;
-      margin-bottom: 0;
-      line-height: 1.5;
-    }
-    .profile-pic {
-      width: 54px;
-      height: 54px;
-      border-radius: 50%;
-      object-fit: cover;
+      color: #-fit: cover;
       margin-bottom: 12px;
       border: 3px solid #60a5fa;
       background: #232526;
@@ -245,7 +213,10 @@
       height: 26px;
       display: inline-flex;
       align-items: center;
-      justify-content;
+      justify-content: center;
+    }
+    .footer {
+      margin-top: 24px;
       font-size: 0.97rem;
       color: #60a5fa;
       text-align: center;
@@ -275,7 +246,11 @@
       .logo-circle svg { width: 19px; height: 19px;}
       h1 { font-size: 1.05rem; }
       .profile-pic { width: 38px; height: 38px; margin-bottom: 7px;}
-      .discord-in    }
+      .discord-invite { font-size: 0.92rem; padding: 5px 12px; margin-top: 8px;}
+      .tag { font-size: 0.85rem; padding: 4px 8px; margin: 5px 0 3px 0;}
+      p { font-size: 0.91rem; }
+      body { background-size: 150px, auto, cover; }
+    }
     @media (max-width: 500px) {
       .header-bar { height: 56px; }
       .header-content { gap: 6px; }
@@ -289,9 +264,7 @@
       .side-menu { padding-top: 56px; }
       .container { margin-top: 60px; max-width: 99vw; padding: 10px 2vw;}
       .logo-circle { width: 32px; height: 32px;}
-      .logo-circle svg { width: 15px; height: 15px;}
-      h1 { font-size: 0.98rem; }
-      .profile-pic { width: 28px; height: 28px; margin-bottom: 5px;}
+      .logo-circle svg      .profile-pic { width: 28px; height: 28px; margin-bottom: 5px;}
       .discord-invite { font-size: 0.85rem; padding: 4px 8px; margin-top: 6px;}
       .tag { font-size: 0.78rem; padding: 3px 7px; margin: 3px 0 2px 0;}
       p { font-size: 0.86rem; }
@@ -305,17 +278,10 @@
     <div class="header-content">
       <div class="header-logo">
         <!-- SVG LOGO -->
-        <.7"/>
+        <svg viewBox="0 0 48 48" fill="none">
+          <circle cx="24" cy="24" r="22" fill="#232526" opacity="0.7"/>
           <path d="M16 30c5-5 11-2 16-8" stroke="#60a5fa" stroke-width="3" stroke-linecap="round"/>
-          <circle cx="18" cy="18" r="3" fill="#2563eb"/>
-          <circle cx="32" cy="16" r="3.5" fill="#60a5fa"/>
-        </svg>
-      </div>
-      <span class="header-name">Irfa Store</span>
-    </div>
-  </div>
-  <!-- Hamburger -->
-  <button class="hamburger" aria-label="Menu" onclick="toggleMenu()">
+          <circle cx="18" cy="18" r="3" fill="#Menu()">
     <span></span>
   </button>
   <!-- Side Menu -->
@@ -326,19 +292,20 @@
   </nav>
   <div class="overlay" id="overlay" onclick="closeMenu()"></div>
   <!-- Halaman Home -->
-  <div class="container active" id="pagelogo-circle">
+  <div class="container active" id="page-home">
+    <div class="logo-circle">
       <!-- SVG Logo -->
       <svg viewBox="0 0 48 48" fill="none">
         <circle cx="24" cy="24" r="22" fill="#232526" opacity="0.7"/>
         <path d="M16 30c5-5 11-2 16-8" stroke="#60a5fa" stroke-width="3" stroke-linecap="round"/>
-        <circle cxp>
-      Ini adalah situs web <b>GitHub Pages</b>.<br>
-      <em>Masih dalam tahap pembangunan! Stay tuned untuk update terbaru.</em>
-    </p>
-  </div>
-  <!-- Halaman MyServer -->
-  <div class="container" id="page-server">
-    <img src="https://images-ext-1.discordapp.net/external/lqpbqiUcODZir1MnyWirGP_1ChcgBI6yBeJDwbgmK24/%3Fsize%3D4096%26ignore%3Dtrue%29./https/cdn.discordapp.com/avatars/1028984151552041000/a_d364c6647e91380f3ff4b3c47089461c.gif?width=225&height=225" alt="Foto Profil" class="profile-pic" />
+        <circle cx="18" cy="18" r="3" fill="#2563eb"/>
+        <circle cx="32" cy="16" r="3.5" fill="#60a5fa"/>
+      </svg>
+    </div>
+    <h1>Selamat datang di <span>IrpaSoftSpoken.github.io!</span></h1>
+    <span class="tag">Situs Keren & Modern 🚀</span>
+    <p>
+     profile-pic" />
     <h1>Join INA GANG Server!</h1>
     <p>
       Ayo gabung ke server Discord komunitas kami untuk ngobrol, sharing, dan seru-seruan bareng.<br>
@@ -381,7 +348,7 @@
             <path d="M31.4 8.2c-.4-1.7-1.7-2.9-3.4-3.2C25.3 4.5 16 4.5 16 4.5s-9.3 0-12 0.5c-1.7.3-3 1.5-3.4 3.2C0 10.7 0 16 0 16s0 5.3.6 7.8c.4 1.7 1.7 2.9 3.4 3.2C6.7 27.5 16 27.5 16 27.5s9.3 0 12-.5c1.7-.3 3-1.5 3.4-3.2.6-2.5.6-7.8.6-7.8s0-5.3-.6-7.8zM12.7 21V11l9.3 5-9.3 5z"/>
           </svg>
         </span>
-        <a href="https://youtube.com/@irfastore969?si=RPwP3lZymWLqAbwL/" target="_blank">YouTube</a>
+        <a href="https://youtube.com/" target="_blank">YouTube Channel</a>
       </li>
       <li>
         <span class="social-icon">
@@ -419,7 +386,9 @@
       if(page === 'home') {
         document.getElementById('menu-home').classList.add('active');
         document.getElementById('page-home').classList.add('active');
-      } else.add('active');
+      } else if(page === 'server') {
+        document.getElementById('menu-server').classList.add('active');
+        document.getElementById('page-server').classList.add('active');
       } else if(page === 'tentang') {
         document.getElementById('menu-tentang').classList.add('active');
         document.getElementById('page-tentang').classList.add('active');
