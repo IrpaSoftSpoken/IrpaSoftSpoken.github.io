@@ -12,19 +12,158 @@
       margin: 0;
       padding: 0;
       min-height: 100vh;
+    }
+    .hamburger {
+      position: fixed;
+      top: 18px;
+      left: 18px;
+      width: 38px;
+      height: 38px;
+      background: none;
+      border: none;
+      z-index: 100;
+      cursor: pointer;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
     }
+    .hamburger span, .hamburger span:before, .hamburger span:after {
+      display: block;
+      background: #6a42d6;
+      height: 4px;
+      width: 28px;
+      border-radius: 2px;
+      position: absolute;
+      transition: all 0.3s;
+      content: '';
+    }
+    .hamburger span {
+      position: relative;
+    }
+    .hamburger span:before {
+      content: '';
+      top: -9px;
+      position: absolute;
+      left: 0;
+      width: 28px;
+    }
+    .hamburger span:after {
+      content: '';
+      top: 9px;
+      position: absolute;
+      left: 0;
+      width: 28px;
+    }
+    .side-menu {
+      position: fixed;
+      top: 0;
+      left: -220px;
+      width: 200px;
+      height: 100%;
+      background: rgba(255,255,255,0.97);
+      box-shadow: 2px 0 16px #a7c7e744;
+      padding: 48px 0 0 0;
+      transition: left 0.3s;
+      z-index: 99;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .side-menu.open {
+      left: 0;
+    }
+    .side-menu a {
+      text-decoration: none;
+      color: #6a42d6;
+      font-weight: 600;
+      padding: 12px 28px;
+      font-size: 1.07rem;
+      border-radius: 0 18px 18px 0;
+      transition: background 0.18s, color 0.18s;
+    }
+    .side-menu a.active,
+    .side-menu a:hover {
+      background: linear-gradient(90deg, #a7c7e7 30%, #f5e1fd 100%);
+      color: #9557e6;
+    }
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      background: rgba(100,80,200,0.07);
+      z-index: 90;
+    }
+    .overlay.open {
+      display: block;
+    }
     .container {
+      margin: 80px auto 0 auto;
+      max-width: 500px;
       background: rgba(255,255,255,0.7);
       border-radius: 18px;
       box-shadow: 0 4px 18px rgba(149,87,230,0.13);
       padding: 32px 22px;
       text-align: center;
-      max-width: 340px;
-      width: 96vw;
+      display: none;
+    }
+    .container.active {
+      display: block;
+      animation: fadeIn 0.7s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(18px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .logo-circle {
+      width: 78px;
+      height: 78px;
+      background: linear-gradient(135deg, #9557e6 60%, #a7c7e7 100%);
+      border-radius: 50%;
+      box-shadow: 0 4px 18px rgba(149,87,230,0.23);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px auto;
+      position: relative;
+    }
+    .logo-circle svg {
+      width: 42px;
+      height: 42px;
+      filter: drop-shadow(0 2px 4px #6a42d6aa);
+    }
+    h1 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      color: #6a42d6;
+      font-size: 2.0rem;
+      margin-bottom: 12px;
+      margin-top: 0;
+      letter-spacing: 1px;
+      text-shadow: 0 1px 10px #d1c4e9;
+    }
+    h1 span {
+      color: #9557e6;
+      background: linear-gradient(90deg, #9557e6 60%, #a7c7e7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .tag {
+      display: inline-block;
+      margin: 12px 0 8px 0;
+      font-size: 0.98rem;
+      background: linear-gradient(90deg, #f5e1fd 60%, #d1c4e9 100%);
+      color: #6a42d6;
+      border-radius: 8px;
+      padding: 5px 16px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      box-shadow: 0 1px 6px #a7c7e7aa;
+    }
+    p {
+      color: #444;
+      font-size: 1.1rem;
+      margin-bottom: 0;
+      line-height: 1.6;
     }
     .profile-pic {
       width: 82px;
@@ -35,12 +174,6 @@
       border: 3px solid #a7c7e7;
       background: #eee;
       display: inline-block;
-    }
-    h1 {
-      font-family: 'Montserrat', Arial, sans-serif;
-      color: #6a42d6;
-      font-size: 1.55rem;
-      margin: 6px 0 13px 0;
     }
     .discord-invite {
       display: inline-block;
@@ -60,29 +193,102 @@
       box-shadow: 0 4px 18px #9557e655;
     }
     .footer {
-      margin-top: 30px;
-      font-size: 0.95rem;
+      margin-top: 32px;
+      font-size: 0.97rem;
       color: #888;
       text-align: center;
     }
+    .footer a {
+      color: #9557e6;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .footer a:hover {
+      color: #6a42d6;
+      text-decoration: underline;
+    }
     @media (max-width: 500px) {
-      .container { padding: 18px 2vw; }
-      .profile-pic { width: 62px; height: 62px; }
+      .container { padding: 16px 2vw; margin-top: 60px;}
+      .logo-circle { width:54px;height:54px;}
+      .logo-circle svg { width:28px;height:28px;}
       h1 { font-size: 1.1rem; }
+      .profile-pic { width: 62px; height: 62px; }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <!-- Ganti src dengan foto kamu -->
-    <img src="https://via.placeholder.com/150" alt="Foto Profil" class="profile-pic" />
-    <h1>Selamat datang di IrpaSoftSpoken!</h1>
-    <p>Gabung ke server Discord komunitas kami untuk ngobrol, sharing, dan seru-seruan bareng.<br>
-      Klik tombol di bawah untuk masuk:</p>
+  <!-- Hamburger -->
+  <button class="hamburger" aria-label="Menu" onclick="toggleMenu()">
+    <span></span>
+  </button>
+  <!-- Side Menu -->
+  <nav class="side-menu" id="sideMenu">
+    <a href="#" id="menu-home" onclick="showPage('home');return false;" class="active">Home</a>
+    <a href="#" id="menu-server" onclick="showPage('server');return false;">MyServer</a>
+    <!-- Tambah menu lagi di sini kalau mau -->
+  </nav>
+  <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+  <!-- Halaman Home -->
+  <div class="container active" id="page-home">
+    <div class="logo-circle">
+      <!-- SVG Logo -->
+      <svg viewBox="0 0 48 48" fill="none">
+        <circle cx="24" cy="24" r="22" fill="#fff" opacity="0.7"/>
+        <path d="M16 30c5-5 11-2 16-8" stroke="#9557e6" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="18" cy="18" r="3" fill="#6a42d6"/>
+        <circle cx="32" cy="16" r="3.5" fill="#a7c7e7"/>
+      </svg>
+    </div>
+    <h1>Selamat datang di <span>IrpaSoftSpoken.github.io!</span></h1>
+    <span class="tag">Situs Keren & Modern 🚀</span>
+    <p>
+      Ini adalah situs web <b>GitHub Pages</b>.<br>
+      <em>Masih dalam tahap pembangunan! Stay tuned untuk update terbaru.</em>
+    </p>
+  </div>
+  <!-- Halaman MyServer -->
+  <div class="container" id="page-server">
+    <img src="https://images-ext-1.discordapp.net/external/lqpbqiUcODZir1MnyWirGP_1ChcgBI6yBeJDwbgmK24/%3Fsize%3D4096%26ignore%3Dtrue%29./https/cdn.discordapp.com/avatars/1028984151552041000/a_d364c6647e91380f3ff4b3c47089461c.gif?width=225&height=225" alt="Foto Profil" class="profile-pic" />
+    <h1>Gabung ke Server Discord!</h1>
+    <p>
+      Ayo gabung ke server Discord komunitas kami untuk ngobrol, sharing, dan seru-seruan bareng.<br>
+      Klik tombol di bawah untuk masuk:
+    </p>
     <a class="discord-invite" href="https://discord.gg/frJWeSwJet" target="_blank">Masuk ke Discord 🚀</a>
   </div>
   <div class="footer">
-    &copy; 2025 <a href="https://github.com/IrpaSoftSpoken" target="_blank" style="color:#9557e6;text-decoration:none;">IrpaSoftSpoken</a>
+    &copy; 2025 <a href="https://github.com/IrpaSoftSpoken" target="_blank">IrpaSoftSpoken</a>
   </div>
+  <script>
+    function toggleMenu() {
+      document.getElementById('sideMenu').classList.toggle('open');
+      document.getElementById('overlay').classList.toggle('open');
+    }
+    function closeMenu() {
+      document.getElementById('sideMenu').classList.remove('open');
+      document.getElementById('overlay').classList.remove('open');
+    }
+    function showPage(page) {
+      // Tab nav active
+      document.getElementById('menu-home').classList.remove('active');
+      document.getElementById('menu-server').classList.remove('active');
+      // Tambah id menu baru di sini kalau kamu tambah menu
+      //
+      // Show/hide content
+      document.getElementById('page-home').classList.remove('active');
+      document.getElementById('page-server').classList.remove('active');
+      // Tambah id page baru di sini kalau kamu tambah page
+      //
+      if(page === 'home') {
+        document.getElementById('menu-home').classList.add('active');
+        document.getElementById('page-home').classList.add('active');
+      } else if(page === 'server') {
+        document.getElementById('menu-server').classList.add('active');
+        document.getElementById('page-server').classList.add('active');
+      }
+      closeMenu();
+    }
+  </script>
 </body>
 </html>
