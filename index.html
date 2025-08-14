@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      background: linear-gradient(120deg, #a7c7e7 0%, #f5e1fd 100%);
+      background: linear-gradient(120deg, #77e2d7 0%, #f9ffcf 100%);
       font-family: 'Quicksand', Arial, sans-serif;
       margin: 0;
       padding: 0;
@@ -21,7 +21,7 @@
       right: 0;
       height: 90px;
       background: #fff;
-      box-shadow: 0 1px 16px #a7c7e744;
+      box-shadow: 0 1px 16px #77e2d744;
       z-index: 101;
       display: flex;
       align-items: center;
@@ -31,9 +31,6 @@
       display: flex;
       align-items: center;
       gap: 22px;
-      position: relative;
-      left: 0;
-      right: 0;
       margin: 0 auto;
       width: fit-content;
       z-index: 102;
@@ -42,8 +39,8 @@
       width: 54px;
       height: 54px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #9557e6 60%, #a7c7e7 100%);
-      box-shadow: 0 2px 10px #a7c7e777;
+      background: linear-gradient(135deg, #28c7fa 60%, #7cf7cb 100%);
+      box-shadow: 0 2px 10px #7cf7cb77;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -51,15 +48,15 @@
     .header-logo svg {
       width: 32px;
       height: 32px;
-      filter: drop-shadow(0 1px 3px #6a42d6aa);
+      filter: drop-shadow(0 1px 3px #28c7faaa);
     }
     .header-name {
       font-family: 'Montserrat', Arial, sans-serif;
       font-size: 1.45rem;
       font-weight: 700;
-      color: #6a42d6;
+      color: #1a6a87;
       letter-spacing: 1px;
-      background: linear-gradient(90deg, #9557e6 60%, #a7c7e7 100%);
+      background: linear-gradient(90deg, #28c7fa 60%, #ffe466 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -81,7 +78,7 @@
     }
     .hamburger span, .hamburger span::before, .hamburger span::after {
       display: block;
-      background: #6a42d6;
+      background: #28c7fa;
       height: 7px;
       width: 40px;
       border-radius: 3px;
@@ -112,7 +109,7 @@
       width: 200px;
       height: 100%;
       background: rgba(255,255,255,0.97);
-      box-shadow: 2px 0 16px #a7c7e744;
+      box-shadow: 2px 0 16px #77e2d744;
       padding: 90px 0 0 0;
       transition: left 0.3s;
       z-index: 99;
@@ -125,7 +122,7 @@
     }
     .side-menu a {
       text-decoration: none;
-      color: #6a42d6;
+      color: #1a6a87;
       font-weight: 600;
       padding: 12px 28px;
       font-size: 1.07rem;
@@ -134,14 +131,14 @@
     }
     .side-menu a.active,
     .side-menu a:hover {
-      background: linear-gradient(90deg, #a7c7e7 30%, #f5e1fd 100%);
-      color: #9557e6;
+      background: linear-gradient(90deg, #77e2d7 30%, #f9ffcf 100%);
+      color: #ffae42;
     }
     .overlay {
       display: none;
       position: fixed;
       top: 0; left: 0; width: 100vw; height: 100vh;
-      background: rgba(100,80,200,0.07);
+      background: rgba(50, 200, 180, 0.07);
       z-index: 90;
     }
     .overlay.open {
@@ -150,10 +147,10 @@
     .container {
       margin: 110px auto 0 auto;
       max-width: 500px;
-      background: rgba(255,255,255,0.7);
+      background: rgba(255,255,255,0.8);
       border-radius: 18px;
-      box-shadow: 0 4px 18px rgba(149,87,230,0.13);
-      padding: 24px 7vw; /* lebih ramping */
+      box-shadow: 0 4px 18px rgba(40,199,250,0.13);
+      padding: 24px 7vw;
       text-align: center;
       display: none;
     }
@@ -168,9 +165,9 @@
     .logo-circle {
       width: 54px;
       height: 54px;
-      background: linear-gradient(135deg, #9557e6 60%, #a7c7e7 100%);
+      background: linear-gradient(135deg, #28c7fa 60%, #7cf7cb 100%);
       border-radius: 50%;
-      box-shadow: 0 4px 18px rgba(149,87,230,0.23);
+      box-shadow: 0 4px 18px rgba(40,199,250,0.23);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -180,20 +177,20 @@
     .logo-circle svg {
       width: 32px;
       height: 32px;
-      filter: drop-shadow(0 2px 4px #6a42d6aa);
+      filter: drop-shadow(0 2px 4px #28c7fa99);
     }
     h1 {
       font-family: 'Montserrat', Arial, sans-serif;
-      color: #6a42d6;
+      color: #1a6a87;
       font-size: 1.3rem;
       margin-bottom: 8px;
       margin-top: 0;
       letter-spacing: 1px;
-      text-shadow: 0 1px 10px #d1c4e9;
+      text-shadow: 0 1px 10px #caf0fa;
     }
     h1 span {
-      color: #9557e6;
-      background: linear-gradient(90deg, #9557e6 60%, #a7c7e7 100%);
+      color: #28c7fa;
+      background: linear-gradient(90deg, #28c7fa 60%, #ffe466 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -202,13 +199,13 @@
       display: inline-block;
       margin: 8px 0 5px 0;
       font-size: 0.9rem;
-      background: linear-gradient(90deg, #f5e1fd 60%, #d1c4e9 100%);
-      color: #6a42d6;
+      background: linear-gradient(90deg, #ffe466 60%, #ffd280 100%);
+      color: #1a6a87;
       border-radius: 8px;
       padding: 5px 12px;
       font-weight: 600;
       letter-spacing: 0.5px;
-      box-shadow: 0 1px 6px #a7c7e7aa;
+      box-shadow: 0 1px 6px #77e2d7aa;
     }
     p {
       color: #444;
@@ -222,13 +219,13 @@
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 12px;
-      border: 3px solid #a7c7e7;
+      border: 3px solid #77e2d7;
       background: #eee;
       display: inline-block;
     }
     .discord-invite {
       display: inline-block;
-      background: linear-gradient(90deg, #9557e6 60%, #a7c7e7 100%);
+      background: linear-gradient(90deg, #28c7fa 60%, #ffe466 100%);
       color: #fff;
       font-weight: 600;
       border-radius: 8px;
@@ -236,12 +233,12 @@
       margin-top: 12px;
       text-decoration: none;
       font-size: 0.98rem;
-      box-shadow: 0 2px 9px #a7c7e7aa;
+      box-shadow: 0 2px 9px #77e2d7aa;
       transition: background 0.2s, box-shadow 0.2s;
     }
     .discord-invite:hover {
-      background: linear-gradient(90deg, #6a42d6 60%, #9557e6 100%);
-      box-shadow: 0 4px 18px #9557e655;
+      background: linear-gradient(90deg, #1a6a87 60%, #28c7fa 100%);
+      box-shadow: 0 4px 18px #28c7fa55;
     }
     .footer {
       margin-top: 24px;
@@ -250,13 +247,13 @@
       text-align: center;
     }
     .footer a {
-      color: #9557e6;
+      color: #28c7fa;
       text-decoration: none;
       font-weight: 600;
       transition: color 0.2s;
     }
     .footer a:hover {
-      color: #6a42d6;
+      color: #1a6a87;
       text-decoration: underline;
     }
     /* Responsive */
@@ -309,9 +306,9 @@
         <!-- SVG LOGO -->
         <svg viewBox="0 0 48 48" fill="none">
           <circle cx="24" cy="24" r="22" fill="#fff" opacity="0.7"/>
-          <path d="M16 30c5-5 11-2 16-8" stroke="#9557e6" stroke-width="3" stroke-linecap="round"/>
-          <circle cx="18" cy="18" r="3" fill="#6a42d6"/>
-          <circle cx="32" cy="16" r="3.5" fill="#a7c7e7"/>
+          <path d="M16 30c5-5 11-2 16-8" stroke="#28c7fa" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="18" cy="18" r="3" fill="#1a6a87"/>
+          <circle cx="32" cy="16" r="3.5" fill="#7cf7cb"/>
         </svg>
       </div>
       <span class="header-name">Irfa Store</span>
@@ -334,9 +331,9 @@
       <!-- SVG Logo -->
       <svg viewBox="0 0 48 48" fill="none">
         <circle cx="24" cy="24" r="22" fill="#fff" opacity="0.7"/>
-        <path d="M16 30c5-5 11-2 16-8" stroke="#9557e6" stroke-width="3" stroke-linecap="round"/>
-        <circle cx="18" cy="18" r="3" fill="#6a42d6"/>
-        <circle cx="32" cy="16" r="3.5" fill="#a7c7e7"/>
+        <path d="M16 30c5-5 11-2 16-8" stroke="#28c7fa" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="18" cy="18" r="3" fill="#1a6a87"/>
+        <circle cx="32" cy="16" r="3.5" fill="#7cf7cb"/>
       </svg>
     </div>
     <h1>Selamat datang di <span>IrpaSoftSpoken.github.io!</span></h1>
@@ -372,13 +369,9 @@
       // Tab nav active
       document.getElementById('menu-home').classList.remove('active');
       document.getElementById('menu-server').classList.remove('active');
-      // Tambah id menu baru di sini kalau kamu tambah menu
-      //
       // Show/hide content
       document.getElementById('page-home').classList.remove('active');
       document.getElementById('page-server').classList.remove('active');
-      // Tambah id page baru di sini kalau kamu tambah page
-      //
       if(page === 'home') {
         document.getElementById('menu-home').classList.add('active');
         document.getElementById('page-home').classList.add('active');
