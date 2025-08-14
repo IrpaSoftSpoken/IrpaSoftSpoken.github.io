@@ -73,7 +73,7 @@
       align-items: center;
       justify-content: center;
     }
-    .hamburger span, .hamburger span:before, .hamburger span:after {
+    .hamburger span, .hamburger span::before, .hamburger span::after {
       display: block;
       background: #6a42d6;
       height: 4px;
@@ -81,19 +81,18 @@
       border-radius: 2px;
       position: absolute;
       transition: all 0.3s;
-      content: '';
     }
     .hamburger span {
       position: relative;
     }
-    .hamburger span:before {
+    .hamburger span::before {
       content: '';
       top: -9px;
       position: absolute;
       left: 0;
       width: 28px;
     }
-    .hamburger span:after {
+    .hamburger span::after {
       content: '';
       top: 9px;
       position: absolute;
