@@ -329,6 +329,43 @@
         background-size: 85px, auto, cover;
       }
     }
+
+/* Tombol Dark Mode */
+#darkModeBtn{
+  background:#28c7fa;border:none;border-radius:8px;padding:6px 12px;color:#fff;
+  font-weight:600;cursor:pointer;font-family:'Quicksand',Arial,sans-serif;
+  box-shadow:0 2px 9px #77e2d7aa
+}
+#darkModeBtn:hover{opacity:.92}
+body.dark-mode #darkModeBtn{background:#1a6a87;box-shadow:0 2px 9px #00000055}
+
+/* Tema Gelap */
+body.dark-mode{
+  background:
+    url('https://cdn.pixabay.com/photo/2014/04/03/10/32/laptop-312769_1280.png') no-repeat right bottom fixed,
+    url('https://www.transparenttextures.com/patterns/geometry2.png') repeat,
+    linear-gradient(120deg,#1b1f22 0%,#2a2f33 100%);
+  background-size:350px,auto,cover;color:#ddd
+}
+body.dark-mode .header-bar{background:#222;box-shadow:0 1px 16px rgba(0,0,0,.6)}
+body.dark-mode .header-name{color:#7cf7cb}
+body.dark-mode .side-menu{background:rgba(25,25,25,.97);box-shadow:2px 0 16px rgba(0,0,0,.4)}
+body.dark-mode .side-menu a{color:#ccc}
+body.dark-mode .side-menu a.active,
+body.dark-mode .side-menu a:hover{background:linear-gradient(90deg,#333 30%,#222 100%);color:#7cf7cb}
+body.dark-mode .container{background:rgba(40,40,40,.85);box-shadow:0 4px 18px rgba(0,0,0,.45)}
+body.dark-mode h1{color:#7cf7cb;text-shadow:none}
+body.dark-mode p{color:#d0d0d0}
+body.dark-mode .discord-invite{background:linear-gradient(90deg,#1a6a87 60%,#28c7fa 100%);color:#fff;box-shadow:0 2px 12px rgba(0,0,0,.35)}
+body.dark-mode .tag{background:linear-gradient(90deg,#2d2d2d 60%,#242424 100%);color:#d6fff3;box-shadow:0 1px 6px rgba(0,0,0,.35)}
+body.dark-mode .footer{color:#aaa}
+body.dark-mode .footer a{color:#7cf7cb}
+body.dark-mode .hamburger span,
+body.dark-mode .hamburger span::before,
+body.dark-mode .hamburger span::after{background:#7cf7cb}
+body.dark-mode .overlay{background:rgba(20,140,120,.12)}
+@media (max-width:700px){body.dark-mode{background-size:150px,auto,cover}}
+@media (max-width:500px){body.dark-mode{background-size:85px,auto,cover}}
   </style>
 </head>
 <body>
@@ -345,6 +382,7 @@
         </svg>
       </div>
       <span class="header-name">Irfa Store</span>
+<button id="darkModeBtn" aria-label="Toggle dark mode" aria-pressed="false">🌙 Dark</button>
     </div>
   </div>
   <!-- Hamburger -->
@@ -468,6 +506,31 @@
       }
       closeMenu();
     }
+
+(function(){
+    const btn=document.getElementById('darkModeBtn');
+    if(!btn) return;
+
+    const saved=localStorage.getItem('theme'); // 'dark' | 'light' | null
+    const prefersDark=window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const startDark = saved ? saved==='dark' : prefersDark;
+
+    if(startDark) document.body.classList.add('dark-mode');
+    updateBtn();
+
+    btn.addEventListener('click',function(){
+      document.body.classList.toggle('dark-mode');
+      const isDark=document.body.classList.contains('dark-mode');
+      localStorage.setItem('theme',isDark?'dark':'light');
+      updateBtn();
+    });
+
+    function updateBtn(){
+      const isDark=document.body.classList.contains('dark-mode');
+      btn.textContent=isDark?'☀ Light':'🌙 Dark';
+      btn.setAttribute('aria-pressed', isDark?'true':'false');
+    }
+  })();
   </script>
 </body>
 </html>
