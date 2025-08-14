@@ -7,7 +7,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      background: linear-gradient(120deg, #77e2d7 0%, #f9ffcf 100%);
+      background:
+        linear-gradient(120deg, #77e2d7 0%, #f9ffcf 100%),
+        url('https://www.transparenttextures.com/patterns/geometry2.png'),
+        url('https://cdn.pixabay.com/photo/2014/04/03/10/32/laptop-312769_1280.png');
+      background-repeat: repeat, repeat, no-repeat;
+      background-position: left top, left top, right bottom;
+      background-size: auto, auto, 350px;
+      background-attachment: fixed, fixed, fixed;
       font-family: 'Quicksand', Arial, sans-serif;
       margin: 0;
       padding: 0;
@@ -275,6 +282,9 @@
       .discord-invite { font-size: 0.92rem; padding: 5px 12px; margin-top: 8px;}
       .tag { font-size: 0.85rem; padding: 4px 8px; margin: 5px 0 3px 0;}
       p { font-size: 0.91rem; }
+      body {
+        background-size: auto, auto, 180px;
+      }
     }
     @media (max-width: 500px) {
       .header-bar { height: 56px; }
@@ -295,6 +305,9 @@
       .discord-invite { font-size: 0.85rem; padding: 4px 8px; margin-top: 6px;}
       .tag { font-size: 0.78rem; padding: 3px 7px; margin: 3px 0 2px 0;}
       p { font-size: 0.86rem; }
+      body {
+        background-size: auto, auto, 100px;
+      }
     }
   </style>
 </head>
