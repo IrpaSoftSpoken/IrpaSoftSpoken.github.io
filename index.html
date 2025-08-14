@@ -10,12 +10,13 @@
       background:
         url('https://cdn.pixabay.com/photo/2014/04/03/10/32/laptop-312769_1280.png') no-repeat right bottom fixed,
         url('https://www.transparenttextures.com/patterns/geometry2.png') repeat,
-        linear-gradient(120deg, #3023ae 0%, #4266dd 50%, #f7797d 100%);
+        linear-gradient(120deg, #232526 0%, #6a11cb 100%);
       background-size: 350px, auto, cover;
       font-family: 'Quicksand', Arial, sans-serif;
       margin: 0;
       padding: 0;
       min-height: 100vh;
+      color: #eef2ff;
     }
     .header-bar {
       position: fixed;
@@ -23,8 +24,8 @@
       left: 0;
       right: 0;
       height: 90px;
-      background: rgba(255,255,255,0.92);
-      box-shadow: 0 1px 16px #3023ae22;
+      background: rgba(36, 40, 54, 0.96);
+      box-shadow: 0 1px 16px #6a11cb33;
       z-index: 101;
       display: flex;
       align-items: center;
@@ -42,8 +43,8 @@
       width: 54px;
       height: 54px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #3023ae 60%, #f7797d 100%);
-      box-shadow: 0 2px 10px #3023ae33;
+      background: linear-gradient(135deg, #232526 60%, #6a11cb 100%);
+      box-shadow: 0 2px 10px #6a11cb33;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -51,17 +52,17 @@
     .header-logo svg {
       width: 32px;
       height: 32px;
-      filter: drop-shadow(0 1px 3px #3023ae88);
+      filter: drop-shadow(0 1px 3px #6a11cb77);
     }
     .header-name {
       font-family: 'Montserrat', Arial, sans-serif;
       font-size: 1.45rem;
       font-weight: 700;
-      background: linear-gradient(90deg, #4266dd 0%, #f7797d 100%);
+      background: linear-gradient(90deg, #6a11cb 0%, #232526 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      color: #3023ae;
+      color: #eef2ff;
       letter-spacing: 1px;
       user-select: none;
     }
@@ -81,7 +82,7 @@
     }
     .hamburger span, .hamburger span::before, .hamburger span::after {
       display: block;
-      background: #4266dd;
+      background: #9f7aea;
       height: 7px;
       width: 40px;
       border-radius: 3px;
@@ -111,8 +112,8 @@
       left: -220px;
       width: 200px;
       height: 100%;
-      background: rgba(255,255,255,0.98);
-      box-shadow: 2px 0 16px #3023ae22;
+      background: rgba(36, 40, 54, 0.97);
+      box-shadow: 2px 0 16px #6a11cb33;
       padding: 90px 0 0 0;
       transition: left 0.3s;
       z-index: 99;
@@ -125,7 +126,7 @@
     }
     .side-menu a {
       text-decoration: none;
-      color: #3023ae;
+      color: #eef2ff;
       font-weight: 600;
       padding: 12px 28px;
       font-size: 1.07rem;
@@ -134,14 +135,14 @@
     }
     .side-menu a.active,
     .side-menu a:hover {
-      background: linear-gradient(90deg, #4266dd22 30%, #fbeff5 100%);
-      color: #f7797d;
+      background: linear-gradient(90deg, #6a11cb44 30%, #232526 100%);
+      color: #9f7aea;
     }
     .overlay {
       display: none;
       position: fixed;
       top: 0; left: 0; width: 100vw; height: 100vh;
-      background: rgba(48,35,174,0.07);
+      background: rgba(36, 40, 54, 0.07);
       z-index: 90;
     }
     .overlay.open {
@@ -150,12 +151,13 @@
     .container {
       margin: 110px auto 0 auto;
       max-width: 500px;
-      background: rgba(255,255,255,0.83);
+      background: rgba(36, 40, 54, 0.93);
       border-radius: 18px;
-      box-shadow: 0 4px 18px rgba(48,35,174,0.13);
+      box-shadow: 0 4px 18px rgba(106,17,203,0.18);
       padding: 24px 7vw;
       text-align: center;
       display: none;
+      color: #eef2ff;
     }
     .container.active {
       display: block;
@@ -168,9 +170,9 @@
     .logo-circle {
       width: 54px;
       height: 54px;
-      background: linear-gradient(135deg, #3023ae 60%, #f7797d 100%);
+      background: linear-gradient(135deg, #232526 60%, #6a11cb 100%);
       border-radius: 50%;
-      box-shadow: 0 4px 18px rgba(48,35,174,0.18);
+      box-shadow: 0 4px 18px #6a11cb33;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -180,19 +182,19 @@
     .logo-circle svg {
       width: 32px;
       height: 32px;
-      filter: drop-shadow(0 2px 4px #3023ae44);
+      filter: drop-shadow(0 2px 4px #6a11cb55);
     }
     h1 {
       font-family: 'Montserrat', Arial, sans-serif;
-      color: #3023ae;
+      color: #9f7aea;
       font-size: 1.3rem;
       margin-bottom: 8px;
       margin-top: 0;
       letter-spacing: 1px;
-      text-shadow: 0 1px 10px #e8dbff;
+      text-shadow: 0 1px 10px #232526;
     }
     h1 span {
-      background: linear-gradient(90deg, #4266dd 10%, #f7797d 80%);
+      background: linear-gradient(90deg, #9f7aea 10%, #6a11cb 80%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -201,16 +203,16 @@
       display: inline-block;
       margin: 8px 0 5px 0;
       font-size: 0.9rem;
-      background: linear-gradient(90deg, #fbeff5 60%, #e6e9f5 100%);
-      color: #3023ae;
+      background: linear-gradient(90deg, #6a11cb44 60%, #232526 100%);
+      color: #eef2ff;
       border-radius: 8px;
       padding: 5px 12px;
       font-weight: 600;
       letter-spacing: 0.5px;
-      box-shadow: 0 1px 6px #3023ae22;
+      box-shadow: 0 1px 6px #6a11cb33;
     }
     p {
-      color: #444;
+      color: #e4e8ff;
       font-size: 0.98rem;
       margin-bottom: 0;
       line-height: 1.5;
@@ -221,13 +223,13 @@
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 12px;
-      border: 3px solid #4266dd;
-      background: #eee;
+      border: 3px solid #9f7aea;
+      background: #232526;
       display: inline-block;
     }
     .discord-invite {
       display: inline-block;
-      background: linear-gradient(90deg, #3023ae 60%, #f7797d 100%);
+      background: linear-gradient(90deg, #6a11cb 60%, #9f7aea 100%);
       color: #fff;
       font-weight: 600;
       border-radius: 8px;
@@ -235,12 +237,12 @@
       margin-top: 12px;
       text-decoration: none;
       font-size: 0.98rem;
-      box-shadow: 0 2px 9px #3023ae33;
+      box-shadow: 0 2px 9px #6a11cb33;
       transition: background 0.2s, box-shadow 0.2s;
     }
     .discord-invite:hover {
-      background: linear-gradient(90deg, #4266dd 60%, #f7797d 100%);
-      box-shadow: 0 4px 18px #f7797d33;
+      background: linear-gradient(90deg, #232526 60%, #9f7aea 100%);
+      box-shadow: 0 4px 18px #6a11cb33;
     }
     .social-list {
       display: flex;
@@ -267,17 +269,17 @@
     .footer {
       margin-top: 24px;
       font-size: 0.97rem;
-      color: #888;
+      color: #9f7aea;
       text-align: center;
     }
     .footer a {
-      color: #4266dd;
+      color: #9f7aea;
       text-decoration: none;
       font-weight: 600;
       transition: color 0.2s;
     }
     .footer a:hover {
-      color: #f7797d;
+      color: #eef2ff;
       text-decoration: underline;
     }
     @media (max-width: 700px) {
@@ -330,10 +332,10 @@
       <div class="header-logo">
         <!-- SVG LOGO -->
         <svg viewBox="0 0 48 48" fill="none">
-          <circle cx="24" cy="24" r="22" fill="#fff" opacity="0.7"/>
-          <path d="M16 30c5-5 11-2 16-8" stroke="#4266dd" stroke-width="3" stroke-linecap="round"/>
-          <circle cx="18" cy="18" r="3" fill="#3023ae"/>
-          <circle cx="32" cy="16" r="3.5" fill="#f7797d"/>
+          <circle cx="24" cy="24" r="22" fill="#232526" opacity="0.7"/>
+          <path d="M16 30c5-5 11-2 16-8" stroke="#9f7aea" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="18" cy="18" r="3" fill="#6a11cb"/>
+          <circle cx="32" cy="16" r="3.5" fill="#9f7aea"/>
         </svg>
       </div>
       <span class="header-name">Irfa Store</span>
@@ -355,10 +357,10 @@
     <div class="logo-circle">
       <!-- SVG Logo -->
       <svg viewBox="0 0 48 48" fill="none">
-        <circle cx="24" cy="24" r="22" fill="#fff" opacity="0.7"/>
-        <path d="M16 30c5-5 11-2 16-8" stroke="#4266dd" stroke-width="3" stroke-linecap="round"/>
-        <circle cx="18" cy="18" r="3" fill="#3023ae"/>
-        <circle cx="32" cy="16" r="3.5" fill="#f7797d"/>
+        <circle cx="24" cy="24" r="22" fill="#232526" opacity="0.7"/>
+        <path d="M16 30c5-5 11-2 16-8" stroke="#9f7aea" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="18" cy="18" r="3" fill="#6a11cb"/>
+        <circle cx="32" cy="16" r="3.5" fill="#9f7aea"/>
       </svg>
     </div>
     <h1>Selamat datang di <span>IrpaSoftSpoken.github.io!</span></h1>
@@ -383,10 +385,10 @@
     <div class="logo-circle">
       <!-- SVG Logo, bisa diganti -->
       <svg viewBox="0 0 48 48" fill="none">
-        <circle cx="24" cy="24" r="22" fill="#fff" opacity="0.7"/>
-        <path d="M16 30c5-5 11-2 16-8" stroke="#4266dd" stroke-width="3" stroke-linecap="round"/>
-        <circle cx="18" cy="18" r="3" fill="#3023ae"/>
-        <circle cx="32" cy="16" r="3.5" fill="#f7797d"/>
+        <circle cx="24" cy="24" r="22" fill="#232526" opacity="0.7"/>
+        <path d="M16 30c5-5 11-2 16-8" stroke="#9f7aea" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="18" cy="18" r="3" fill="#6a11cb"/>
+        <circle cx="32" cy="16" r="3.5" fill="#9f7aea"/>
       </svg>
     </div>
     <h1><span>Tentang</span> Website Ini</h1>
@@ -418,7 +420,7 @@
       <li>
         <span class="social-icon">
           <!-- GitHub SVG Icon -->
-          <svg fill="#181717" width="24" height="24" viewBox="0 0 24 24">
+          <svg fill="#9f7aea" width="24" height="24" viewBox="0 0 24 24">
             <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.757-1.333-1.757-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.107-.775.418-1.305.76-1.605-2.665-.305-5.466-1.334-5.466-5.931 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23A11.52 11.52 0 0 1 12 6.844c1.02.005 2.045.138 3.004.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.804 5.624-5.475 5.921.43.37.814 1.096.814 2.211 0 1.595-.014 2.883-.014 3.274 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
           </svg>
         </span>
