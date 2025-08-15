@@ -379,6 +379,21 @@ body.dark-mode .hamburger span::after{background:#7cf7cb}
 body.dark-mode .overlay{background:rgba(20,140,120,.12)}
 @media (max-width:700px){body.dark-mode{background-size:150px,auto,cover}}
 @media (max-width:500px){body.dark-mode{background-size:85px,auto,cover}}
+
+/* Hero Image */
+.hero-image {
+  margin: 12px auto 20px auto; /* jarak atas dan bawah */
+  max-width: 100%;             /* jangan terlalu besar */
+  border-radius: 12px;         /* sudut membulat */
+  overflow: hidden;            /* supaya gambar pas di dalam box */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15); /* bayangan halus */
+}
+
+.hero-image img {
+  width: 100%;  /* gambar menyesuaikan lebar container */
+  display: block;
+  height: auto; /* tinggi otomatis agar proporsional */
+}
   </style>
 </head>
 <body>
@@ -420,6 +435,10 @@ body.dark-mode .overlay{background:rgba(20,140,120,.12)}
         <circle cx="32" cy="16" r="3.5" fill="#7cf7cb"/>
       </svg>
     </div>
+<!-- Hero Image -->
+<div class="hero-image">
+  <img src="https://cdn.pixabay.com/photo/2016/11/19/14/00/abstract-1839360_1280.jpg" alt="Ilustrasi" />
+</div>
     <h1>Selamat datang di web <span>IrpaSoftSpoken!</span></h1>
     <span class="tag">Situs Keren & Modern 🚀</span>
     <p>
