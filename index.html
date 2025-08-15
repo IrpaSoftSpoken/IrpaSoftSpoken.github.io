@@ -54,282 +54,85 @@
       height: 32px;
       filter: drop-shadow(0 1px 3px #28c7faaa);
     }
-    /* --- BAGIAN INI YANG DIUBAH --- */
-    .header-name {
-      font-family: 'Montserrat', Arial, sans-serif;
-      font-size: 1.45rem;
-      font-weight: 700;
-      color: #28c7fa; /* Warna biru solid, tinggal ganti jika mau biru lain */
-      letter-spacing: 1px;
-      background: none;
-      -webkit-background-clip: unset;
-      -webkit-text-fill-color: unset;
-      background-clip: unset;
-      user-select: none;
-    }
-    /* --- SAMPAI SINI --- */
-    .hamburger {
-      position: fixed;
-      top: 26px;
-      left: 28px;
-      width: 52px;
-      height: 52px;
-      background: none;
-      border: none;
-      z-index: 200;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .hamburger span, .hamburger span::before, .hamburger span::after {
-      display: block;
-      background: #28c7fa;
-      height: 7px;
-      width: 40px;
-      border-radius: 3px;
-      position: absolute;
-      transition: all 0.3s;
-    }
-    .hamburger span {
-      position: relative;
-    }
-    .hamburger span::before {
-      content: '';
-      top: -14px;
-      position: absolute;
-      left: 0;
-      width: 40px;
-    }
-    .hamburger span::after {
-      content: '';
-      top: 14px;
-      position: absolute;
-      left: 0;
-      width: 40px;
-    }
-    .side-menu {
-      position: fixed;
-      top: 0;
-      left: -220px;
-      width: 200px;
-      height: 100%;
-      background: rgba(255,255,255,0.97);
-      box-shadow: 2px 0 16px #77e2d744;
-      padding: 90px 0 0 0;
-      transition: left 0.3s;
-      z-index: 99;
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-    .side-menu.open {
-      left: 0;
-    }
-    .side-menu a {
-      text-decoration: none;
-      color: #1a6a87;
-      font-weight: 600;
-      padding: 12px 28px;
-      font-size: 1.07rem;
-      border-radius: 0 18px 18px 0;
-      transition: background 0.18s, color 0.18s;
-    }
-    .side-menu a.active,
-    .side-menu a:hover {
-      background: linear-gradient(90deg, #77e2d7 30%, #fff 100%);
-      color: #28c7fa;
-    }
-    .overlay {
-      display: none;
-      position: fixed;
-      top: 0; left: 0; width: 100vw; height: 100vh;
-      background: rgba(50, 200, 180, 0.07);
-      z-index: 90;
-    }
-    .overlay.open {
-      display: block;
-    }
-    .container {
-      margin: 110px auto 0 auto;
-      max-width: 500px;
-      background: rgba(255,255,255,0.8);
-      border-radius: 18px;
-      box-shadow: 0 4px 18px rgba(40,199,250,0.13);
-      padding: 24px 7vw;
-      text-align: center;
-      display: none;
-    }
-    .container.active {
-      display: block;
-      animation: fadeIn 0.7s;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(18px);}
-      to { opacity: 1; transform: translateY(0);}
-    }
-    .logo-circle {
-      width: 54px;
-      height: 54px;
-      background: linear-gradient(135deg, #28c7fa 60%, #7cf7cb 100%);
-      border-radius: 50%;
-      box-shadow: 0 4px 18px rgba(40,199,250,0.23);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 14px auto;
-      position: relative;
-    }
-    .logo-circle svg {
-      width: 32px;
-      height: 32px;
-      filter: drop-shadow(0 2px 4px #28c7fa99);
-    }
-    h1 {
-      font-family: 'Montserrat', Arial, sans-serif;
-      color: #1a6a87;
-      font-size: 1.3rem;
-      margin-bottom: 8px;
-      margin-top: 0;
-      letter-spacing: 1px;
-      text-shadow: 0 1px 10px #caf0fa;
-    }
-    h1 span {
-      color: #28c7fa;
-      background: linear-gradient(90deg, #28c7fa 60%, #fff 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .tag {
-      display: inline-block;
-      margin: 8px 0 5px 0;
-      font-size: 0.9rem;
-      background: linear-gradient(90deg, #fff 60%, #f4f7fa 100%);
-      color: #1a6a87;
-      border-radius: 8px;
-      padding: 5px 12px;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      box-shadow: 0 1px 6px #77e2d7aa;
-    }
-    p {
-      color: #444;
-      font-size: 0.98rem;
-      margin-bottom: 0;
-      line-height: 1.5;
-    }
-    .profile-pic {
-      width: 54px;
-      height: 54px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 12px;
-      border: 3px solid #77e2d7;
-      background: #eee;
-      display: inline-block;
-    }
-    .discord-invite {
-      display: inline-block;
-      background: linear-gradient(90deg, #28c7fa 60%, #fff 100%);
-      color: #1a6a87;
-      font-weight: 600;
-      border-radius: 8px;
-      padding: 6px 16px;
-      margin-top: 12px;
-      text-decoration: none;
-      font-size: 0.98rem;
-      box-shadow: 0 2px 9px #77e2d7aa;
-      transition: background 0.2s, box-shadow 0.2s;
-    }
-    .discord-invite:hover {
-      background: linear-gradient(90deg, #1a6a87 60%, #28c7fa 100%);
-      color: #fff;
-      box-shadow: 0 4px 18px #28c7fa55;
-    }
-    .social-list {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      align-items: flex-start;
-      margin: 18px 0 0 0;
-      padding: 0;
-      list-style: none;
-    }
-    .social-list li {
-      display: flex;
-      align-items: center;
-      gap: 9px;
-      font-size: 1.05rem;
-    }
-    .social-icon {
-      width: 26px;
-      height: 26px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .footer {
-      margin-top: 24px;
-      font-size: 0.97rem;
-      color: #888;
-      text-align: center;
-    }
-    .footer a {
-      color: #28c7fa;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.2s;
-    }
-    .footer a:hover {
-      color: #1a6a87;
-      text-decoration: underline;
-    }
-    @media (max-width: 700px) {
-      .header-bar { height: 68px; }
-      .header-logo { width: 36px; height: 36px; }
-      .header-logo svg { width: 20px; height: 20px; }
-      .header-name { font-size: 1.1rem; }
-      .hamburger { top: 12px; left: 8px; width: 42px; height: 42px; }
-      .hamburger span, .hamburger span::before, .hamburger span::after { height: 6px; width: 32px;}
-      .hamburger span::before { top: -11px; width: 32px;}
-      .hamburger span::after { top: 11px; width: 32px;}
-      .side-menu { padding-top: 68px; }
-      .container { margin-top: 82px; max-width: 98vw; padding: 16px 2vw;}
-      .logo-circle { width: 38px; height: 38px;}
-      .logo-circle svg { width: 19px; height: 19px;}
-      h1 { font-size: 1.05rem; }
-      .profile-pic { width: 38px; height: 38px; margin-bottom: 7px;}
-      .discord-invite { font-size: 0.92rem; padding: 5px 12px; margin-top: 8px;}
-      .tag { font-size: 0.85rem; padding: 4px 8px; margin: 5px 0 3px 0;}
-      p { font-size: 0.91rem; }
-      body {
-        background-size: 150px, auto, cover;
-      }
-    }
-    @media (max-width: 500px) {
-      .header-bar { height: 56px; }
-      .header-content { gap: 6px; }
-      .header-logo { width: 28px; height: 28px;}
-      .header-logo svg { width: 15px; height: 15px;}
-      .header-name { font-size: 0.95rem;}
-      .hamburger { top: 8px; left: 2px; width: 32px; height: 32px; }
-      .hamburger span, .hamburger span::before, .hamburger span::after { height: 4px; width: 22px;}
-      .hamburger span::before { top: -7px; width: 22px;}
-      .hamburger span::after { top: 7px; width: 22px;}
-      .side-menu { padding-top: 56px; }
-      .container { margin-top: 60px; max-width: 99vw; padding: 10px 2vw;}
-      .logo-circle { width: 32px; height: 32px;}
-      .logo-circle svg { width: 15px; height: 15px;}
-      h1 { font-size: 0.98rem; }
-      .profile-pic { width: 28px; height: 28px; margin-bottom: 5px;}
-      .discord-invite { font-size: 0.85rem; padding: 4px 8px; margin-top: 6px;}
-      .tag { font-size: 0.78rem; padding: 3px 7px; margin: 3px 0 2px 0;}
-      p { font-size: 0.86rem; }
-      body {
-        background-size: 85px, auto, cover;
-      }
-    }
+/* Header Bar */
+.header-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px; /* dikurangi dari 90px */
+  background: #fff;
+  box-shadow: 0 1px 16px #77e2d744;
+  z-index: 101;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Konten Header */
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 18px; /* dikurangi sedikit */
+  margin: 0 auto;
+  width: fit-content;
+  z-index: 102;
+}
+
+/* Logo */
+.header-logo {
+  width: 48px; /* lebih pas */
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #28c7fa 60%, #7cf7cb 100%);
+  box-shadow: 0 2px 10px #7cf7cb77;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Nama Header */
+.header-name {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.25rem; /* dikurangi */
+  font-weight: 700;
+  color: #28c7fa;
+  letter-spacing: 1px;
+}
+
+/* Hamburger */
+.hamburger {
+  top: 20px; /* lebih pas */
+  left: 20px;
+  width: 42px;
+  height: 42px;
+}
+
+.hamburger span,
+.hamburger span::before,
+.hamburger span::after {
+  height: 5px; /* dikurangi */
+  width: 32px;
+}
+
+/* Media Queries (untuk HP) */
+@media (max-width: 700px) {
+  .header-bar { height: 60px; }
+  .header-logo { width: 36px; height: 36px; }
+  .header-logo svg { width: 20px; height: 20px; }
+  .header-name { font-size: 1.05rem; }
+  .hamburger { top: 12px; left: 12px; width: 36px; height: 36px; }
+  .hamburger span, .hamburger span::before, .hamburger span::after { height: 4px; width: 28px;}
+}
+
+@media (max-width: 500px) {
+  .header-bar { height: 52px; }
+  .header-logo { width: 28px; height: 28px; }
+  .header-logo svg { width: 16px; height: 16px; }
+  .header-name { font-size: 0.95rem; }
+  .hamburger { top: 8px; left: 8px; width: 32px; height: 32px; }
+  .hamburger span, .hamburger span::before, .hamburger span::after { height: 3px; width: 22px;}
+}
 
 /* Tombol Dark Mode */
 #darkModeBtn {
