@@ -23,7 +23,7 @@
       top: 0;
       left: 0;
       right: 0;
-      height: 90px;
+      height: 70px;
       background: #fff;
       box-shadow: 0 1px 16px #77e2d744;
       z-index: 101;
@@ -34,14 +34,14 @@
     .header-content {
       display: flex;
       align-items: center;
-      gap: 22px;
+      gap: 18px;
       margin: 0 auto;
       width: fit-content;
       z-index: 102;
     }
     .header-logo {
-      width: 54px;
-      height: 54px;
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
       background: linear-gradient(135deg, #28c7fa 60%, #7cf7cb 100%);
       box-shadow: 0 2px 10px #7cf7cb77;
@@ -57,7 +57,7 @@
     /* --- BAGIAN INI YANG DIUBAH --- */
     .header-name {
       font-family: 'Montserrat', Arial, sans-serif;
-      font-size: 1.45rem;
+      font-size: 1.25rem;
       font-weight: 700;
       color: #28c7fa; /* Warna biru solid, tinggal ganti jika mau biru lain */
       letter-spacing: 1px;
@@ -70,10 +70,10 @@
     /* --- SAMPAI SINI --- */
     .hamburger {
       position: fixed;
-      top: 26px;
-      left: 28px;
-      width: 52px;
-      height: 52px;
+      top: 20px;
+      left: 20px;
+      width: 42px;
+      height: 42px;
       background: none;
       border: none;
       z-index: 200;
@@ -106,7 +106,8 @@
       top: 14px;
       position: absolute;
       left: 0;
-      width: 40px;
+      width: 32px;
+      height: 5px;
     }
     .side-menu {
       position: fixed;
@@ -289,8 +290,8 @@
       .header-bar { height: 68px; }
       .header-logo { width: 36px; height: 36px; }
       .header-logo svg { width: 20px; height: 20px; }
-      .header-name { font-size: 1.1rem; }
-      .hamburger { top: 12px; left: 8px; width: 42px; height: 42px; }
+      .header-name { font-size: 1.06rem; }
+      .hamburger { top: 12px; left: 12px; width: 36px; height: 36px; }
       .hamburger span, .hamburger span::before, .hamburger span::after { height: 6px; width: 32px;}
       .hamburger span::before { top: -11px; width: 32px;}
       .hamburger span::after { top: 11px; width: 32px;}
@@ -308,13 +309,13 @@
       }
     }
     @media (max-width: 500px) {
-      .header-bar { height: 56px; }
+      .header-bar { height: 52px; }
       .header-content { gap: 6px; }
       .header-logo { width: 28px; height: 28px;}
-      .header-logo svg { width: 15px; height: 15px;}
+      .header-logo svg { width: 16px; height: 16px;}
       .header-name { font-size: 0.95rem;}
-      .hamburger { top: 8px; left: 2px; width: 32px; height: 32px; }
-      .hamburger span, .hamburger span::before, .hamburger span::after { height: 4px; width: 22px;}
+      .hamburger { top: 8px; left: 8px; width: 32px; height: 32px; }
+      .hamburger span, .hamburger span::before, .hamburger span::after { height: 3px; width: 22px;}
       .hamburger span::before { top: -7px; width: 22px;}
       .hamburger span::after { top: 7px; width: 22px;}
       .side-menu { padding-top: 56px; }
